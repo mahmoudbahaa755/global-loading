@@ -1,6 +1,6 @@
 # Global Loading State
 
-This package provides a simple and efficient way to manage global loading states in React applications using an event-driven approach.
+This package provides a simple and efficient way to manage global loading states in React applications. It enables the seamless triggering of loading states across any component, serving as a minimalist state management system.
 
 ## Installation
 
