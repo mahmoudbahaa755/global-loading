@@ -17,5 +17,5 @@
     "url": "https://github.com/mahmoudbahaa755/global-loading/issues"
   },
   "homepage": "https://github.com/mahmoudbahaa755/global-loading#readme",
-  "files": [ "src/**/*.ts", "src/main.ts"]
+  "files": [ "src/main.js"]
 }
