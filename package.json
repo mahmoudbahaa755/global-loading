@@ -3,14 +3,12 @@
 {
   "name": "global-loading-state",
   "version": "1.0.0",
-  "author": "Mahmoud Bahaa mahmoudbahaa755@gmail.com",
+  "author": "Mahmoud Bahaa <mahmoudbahaa755@gmail.com>",
   "description": "a global loading state chared between all components",
   "main": "/src/index.ts",
   "keywords": ["global state","state management","state"],
   "license": "ISC",
-  "dependencies": {
-    "react": ">=15.0.0"
-  },
+ 
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mahmoudbahaa755/global-loading.git"
