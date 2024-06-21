@@ -2,7 +2,7 @@
 
 {
   "name": "global-loading-state",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "author": "Mahmoud Bahaa <mahmoudbahaa755@gmail.com>",
   "description": "a global loading state chared between all components",
   "main": "main.ts",
@@ -10,7 +10,9 @@
 
   "keywords": ["global state","state management","state"],
   "license": "ISC",
- 
+ "publishConfig": {
+  "registry": "https://npm.pkg.github.com/mahmoudbahaa755"
+},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mahmoudbahaa755/global-loading.git"
