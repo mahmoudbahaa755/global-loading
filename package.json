@@ -2,10 +2,12 @@
 
 {
   "name": "global-loading-state",
-  "version": "1.0.0",
+  "version": "1.0.03",
   "author": "Mahmoud Bahaa <mahmoudbahaa755@gmail.com>",
   "description": "a global loading state chared between all components",
-  "main": "/src/index.ts",
+  "main": "main.ts",
+  "type": "module",
+
   "keywords": ["global state","state management","state"],
   "license": "ISC",
  
@@ -17,5 +19,5 @@
     "url": "https://github.com/mahmoudbahaa755/global-loading/issues"
   },
   "homepage": "https://github.com/mahmoudbahaa755/global-loading#readme",
-  "files": [ "src/main.js"]
+  "files": [ "main.ts"]
 }

@@ -1,8 +1,13 @@
 import { useEffect, useState } from "react";
 
-class EventEmitter {
+interface EventMap {
+  [eventName: string]: Array<(data?: any) => void>;
+}
 
-  subscribe(eventName, fn) {
+class EventEmitter {
+  private events: EventMap = {};
+
+  subscribe(eventName: string, fn: (data?: any) => void): () => void {
     if (!this.events[eventName]) {
       this.events[eventName] = [];
     }
@@ -14,7 +19,7 @@ class EventEmitter {
     };
   }
 
-  emit(eventName, data) {
+  emit(eventName: string, data?: any): void {
     const event = this.events[eventName];
     if (event) {
       event.forEach((fn) => {
@@ -23,14 +28,14 @@ class EventEmitter {
     }
   }
 }
-const eventEmitter = new EventEmitter();
-function GlobalLoading() {
-  const [loading, setLoading] = useState(false);
+
+export const globalLoader = new EventEmitter();
+
+export function GlobalLoading(): boolean {
+  const [loading, setLoading] = useState<boolean>(false);
   useEffect(() => {
-    const unsubscribe = eventEmitter.subscribe("changeLoading", setLoading);
+    const unsubscribe = globalLoader.subscribe("changeLoading", setLoading);
     return () => unsubscribe();
   }, []);
   return loading;
 }
-exports.GlobalLoading = GlobalLoading;
-exports.eventEmitter = eventEmitter;
