@@ -2,7 +2,7 @@
 
 {
   "name": "global-loading-state",
-  "version": "1.0.03",
+  "version": "1.0.4",
   "author": "Mahmoud Bahaa <mahmoudbahaa755@gmail.com>",
   "description": "a global loading state chared between all components",
   "main": "main.ts",
