@@ -29,9 +29,9 @@ class EventEmitter {
   }
 }
 
-export const eventEmitter = new EventEmitter();
+const eventEmitter = new EventEmitter();
 
-export function GlobalLoading(): boolean {
+function GlobalLoading(): boolean {
   const [loading, setLoading] = useState<boolean>(false);
   useEffect(() => {
     const unsubscribe = eventEmitter.subscribe("changeLoading", setLoading);
@@ -39,3 +39,8 @@ export function GlobalLoading(): boolean {
   }, []);
   return loading;
 }
+export const globalLoading = GlobalLoading;
+
+export const setGlobalLoading = (loading: boolean) => {
+  eventEmitter.emit("changeLoading", loading);
+};
