@@ -1,10 +1,12 @@
-import { useGlobalLoading } from "../main";
+import { useGlobalLoading } from "./main";
 
 export {
   globalLoader,
   useGlobalLoading,
   startLoading,
   endLoading,
-} from "../main";
+} from "./main";
 
 export const GlobalLoading = useGlobalLoading;
+
+export * from "./main";

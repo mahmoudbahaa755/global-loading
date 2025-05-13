@@ -8,7 +8,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsc",
+    "build": "tsc && rollup -c",
     "prepublishOnly": "npm run build"
   },
   "peerDependencies": {
