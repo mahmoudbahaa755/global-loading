@@ -6,27 +6,72 @@ This package provides a simple and efficient way to manage global loading states
 
 ```bash
 npm install global-loading-state
-
-
+# or
+yarn add global-loading-state
 ```
 
-usage
+## Usage
 
-```code
+### Using the GlobalLoading Hook
 
-import React from 'react';
-import GlobalLoading from 'global-loading-state';
+```jsx
+import React from "react";
+import { useGlobalLoading } from "global-loading-state";
 
-const Button = () => (
-  <button disabled={GlobalLoading()}>Click Me</button>
-);
+const Button = () => {
+  const isLoading = useGlobalLoading();
+
+  return (
+    <button disabled={isLoading}>
+      {isLoading ? "Loading..." : "Click Me"}
+    </button>
+  );
+};
 
 export default Button;
 ```
 
-then You can trigger the loading state from any component by using the eventEmitter to emit a change.
+### Controlling the Loading State
 
-```code
+```jsx
+import React from "react";
+import { setGlobalLoading } from "global-loading-state";
+
+const DataFetcher = () => {
+  const fetchData = async () => {
+    setGlobalLoading(true);
+    try {
+      await fetch("https://api.example.com/data");
+    } finally {
+      setGlobalLoading(false);
+    }
+  };
+
+  return <button onClick={fetchData}>Fetch Data</button>;
+};
+```
+
+## API
+
+| Function                           | Description                                               |
+| ---------------------------------- | --------------------------------------------------------- |
+| `useGlobalLoading()`               | React hook that returns the current loading state boolean |
+| `setGlobalLoading(state: boolean)` | Function to set the global loading state                  |
+
+## Advanced Usage
+
+You can also directly access the event emitter for more complex scenarios:
+
+```jsx
+import { eventEmitter } from "global-loading-state";
+
+// Set loading state to true
 eventEmitter.emit("changeLoading", true);
 
+// Set loading state to false
+eventEmitter.emit("changeLoading", false);
 ```
+
+## License
+
+MIT
