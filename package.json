@@ -1,28 +1,22 @@
 {
-  "name": "global-loading-state",
-  "version": "1.0.7",
-  "author": "Mahmoud Bahaa <mahmoudbahaa755@gmail.com>",
-  "description": "a global loading state chared between all components",
-  "main": "main.ts",
-  "type": "module",
-  "keywords": [
-    "global state",
-    "state management",
-    "state",
-    "react",
-    "Next.js"
-  ],
-  "license": "ISC",
-
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/mahmoudbahaa755/global-loading.git"
-  },
-  "bugs": {
-    "url": "https://github.com/mahmoudbahaa755/global-loading/issues"
-  },
-  "homepage": "https://github.com/mahmoudbahaa755/global-loading#readme",
+  "name": "global-loading",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
   "files": [
-    "main.ts"
-  ]
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.0",
+    "react": "^18.2.0",
+    "@types/react": "^18.0.0"
+  }
 }
