@@ -4,6 +4,30 @@
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
+  "author": {
+    "name": "Mahmoud Bahaa",
+    "url": "https://github.com/mahmoudbahaa755",
+    "email": "mahmoudbahaa755@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mahmoudbahaa755/global-loading.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mahmoudbahaa755/global-loading/issues"
+  },
+  "homepage": "https://github.com/mahmoudbahaa755/global-loading.git",
+  "keywords": [
+    "react",
+    "nextjs",
+    "loading",
+    "state",
+    "global",
+    "context",
+    "global loading"
+  ],
+  "license": "MIT",
+  "description": "A React context for managing global loading state in your application.",
   "files": [
     "dist"
   ],
